@@ -78,19 +78,19 @@ static QByteArray strip_comments(const QByteArray &data) {
 
 static QIcon icon_for_element_type(const QString &type) {
   if (type == "panel") {
-    return QIcon(":/icons/box.svg");
+    return QIcon(":/icons/box.png");
   }
   if (type == "text") {
-    return QIcon(":/icons/type.svg");
+    return QIcon(":/icons/type.png");
   }
   if (type == "image") {
-    return QIcon(":/icons/image.svg");
+    return QIcon(":/icons/image.png");
   }
   if (type == "button") {
-    return QIcon(":/icons/mouse-pointer.svg");
+    return QIcon(":/icons/mouse-pointer.png");
   }
   if (type == "image_button") {
-    return QIcon(":/icons/image.svg");
+    return QIcon(":/icons/image.png");
   }
   return QIcon();
 }
@@ -137,7 +137,7 @@ static QVector<QJsonObject> parse_objects(const QByteArray &data) {
 
 main_window::main_window(QWidget *parent) : QMainWindow(parent) {
   setWindowTitle("Infernum Engine Editor");
-  setWindowIcon(QIcon(":/icons/layers.svg"));
+  setWindowIcon(QIcon(":/icons/layers.png"));
   resize(1280, 800);
   setStyleSheet("QMainWindow { background-color: #1b1d1f; }"
                 "QMenuBar { background-color: #1b1d1f; color: #d6d6d6; }"
@@ -247,9 +247,9 @@ void main_window::build_code_panel() {
   d_code_files = new QComboBox(bar);
   d_code_files->setMinimumWidth(320);
   QPushButton *save_button = new QPushButton("Save", bar);
-  save_button->setIcon(QIcon(":/icons/save.svg"));
+  save_button->setIcon(QIcon(":/icons/save.png"));
   QPushButton *reload_button = new QPushButton("Reload", bar);
-  reload_button->setIcon(QIcon(":/icons/rotate-cw.svg"));
+  reload_button->setIcon(QIcon(":/icons/rotate-cw.png"));
 
   bar_layout->addWidget(label);
   bar_layout->addWidget(d_code_files, 1);
@@ -283,18 +283,18 @@ void main_window::build_menus() {
   QMenu *file_menu = menuBar()->addMenu("File");
 
   QAction *new_scene_action = file_menu->addAction("New Scene…");
-  new_scene_action->setIcon(QIcon(":/icons/file.svg"));
+  new_scene_action->setIcon(QIcon(":/icons/file.png"));
   new_scene_action->setShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_N));
   connect(new_scene_action, &QAction::triggered, this, &main_window::create_new_scene);
 
   QAction *save_action = file_menu->addAction("Save");
   save_action->setShortcut(QKeySequence::Save);
-  save_action->setIcon(QIcon(":/icons/save.svg"));
+  save_action->setIcon(QIcon(":/icons/save.png"));
   connect(save_action, &QAction::triggered, this, &main_window::save_active);
 
   QAction *reload_action = file_menu->addAction("Reload");
   reload_action->setShortcut(QKeySequence(Qt::CTRL | Qt::Key_R));
-  reload_action->setIcon(QIcon(":/icons/rotate-cw.svg"));
+  reload_action->setIcon(QIcon(":/icons/rotate-cw.png"));
   connect(reload_action, &QAction::triggered, this, [this]() {
     if (!maybe_save_code()) {
       return;
@@ -307,7 +307,7 @@ void main_window::build_menus() {
   file_menu->addSeparator();
   QAction *quit_action = file_menu->addAction("Quit");
   quit_action->setShortcut(QKeySequence::Quit);
-  quit_action->setIcon(QIcon(":/icons/x.svg"));
+  quit_action->setIcon(QIcon(":/icons/x.png"));
   connect(quit_action, &QAction::triggered, this, &main_window::close);
 
   QMenu *edit_menu = menuBar()->addMenu("Edit");
@@ -317,7 +317,7 @@ void main_window::build_menus() {
   redo_action->setEnabled(false);
   edit_menu->addSeparator();
   QAction *delete_action = edit_menu->addAction("Delete");
-  delete_action->setIcon(QIcon(":/icons/trash-2.svg"));
+  delete_action->setIcon(QIcon(":/icons/trash-2.png"));
   connect(delete_action, &QAction::triggered, this, &main_window::delete_selected);
 
   QMenu *view_menu = menuBar()->addMenu("View");
@@ -326,7 +326,7 @@ void main_window::build_menus() {
   QAction *code_action = view_menu->addAction("Code");
   code_action->setCheckable(true);
   code_action->setChecked(true);
-  code_action->setIcon(QIcon(":/icons/code.svg"));
+  code_action->setIcon(QIcon(":/icons/code.png"));
   connect(code_action, &QAction::toggled, this, [this](bool visible) {
     if (d_code_dock) {
       d_code_dock->setVisible(visible);
@@ -336,16 +336,16 @@ void main_window::build_menus() {
   QMenu *test_menu = menuBar()->addMenu("Test");
   QAction *play_action = test_menu->addAction("Play");
   play_action->setShortcut(QKeySequence(Qt::Key_F5));
-  play_action->setIcon(QIcon(":/icons/play.svg"));
+  play_action->setIcon(QIcon(":/icons/play.png"));
   connect(play_action, &QAction::triggered, this, &main_window::play_game);
   QAction *stop_action = test_menu->addAction("Stop");
   stop_action->setShortcut(QKeySequence(Qt::SHIFT | Qt::Key_F5));
-  stop_action->setIcon(QIcon(":/icons/square.svg"));
+  stop_action->setIcon(QIcon(":/icons/square.png"));
   connect(stop_action, &QAction::triggered, this, &main_window::stop_game);
 
   QMenu *help_menu = menuBar()->addMenu("Help");
   QAction *about_action = help_menu->addAction("About Infernum Engine");
-  about_action->setIcon(QIcon(":/icons/info.svg"));
+  about_action->setIcon(QIcon(":/icons/info.png"));
   connect(about_action, &QAction::triggered, this, &main_window::show_about);
 
   QToolBar *toolbar = addToolBar("Infernum");
@@ -508,12 +508,12 @@ void main_window::refresh_explorer() {
 
   QTreeWidgetItem *workspace = new QTreeWidgetItem(d_explorer);
   workspace->setText(0, "Workspace");
-  workspace->setIcon(0, QIcon(":/icons/folder.svg"));
+  workspace->setIcon(0, QIcon(":/icons/folder.png"));
 
   for (const QString &scene_name : d_scene_order) {
     QTreeWidgetItem *scene_item = new QTreeWidgetItem(workspace);
     scene_item->setText(0, scene_name);
-    scene_item->setIcon(0, QIcon(":/icons/code.svg"));
+    scene_item->setIcon(0, QIcon(":/icons/code.png"));
     if (scene_name == d_settings.value("main_scene", "main_scene").toString()) {
       QFont font = scene_item->font(0);
       font.setBold(true);
@@ -854,11 +854,11 @@ void main_window::save_project() {
 void main_window::add_new_object_submenu(QMenu *parent) {
   QMenu *sub = new QMenu("Add new object", parent);
   const struct { const char *label; const char *type; const char *icon; } entries[] = {
-      {"Panel", "panel", ":/icons/box.svg"},
-      {"Text", "text", ":/icons/type.svg"},
-      {"Image", "image", ":/icons/image.svg"},
-      {"Button", "button", ":/icons/mouse-pointer.svg"},
-      {"Image Button", "image_button", ":/icons/image.svg"},
+      {"Panel", "panel", ":/icons/box.png"},
+      {"Text", "text", ":/icons/type.png"},
+      {"Image", "image", ":/icons/image.png"},
+      {"Button", "button", ":/icons/mouse-pointer.png"},
+      {"Image Button", "image_button", ":/icons/image.png"},
   };
   for (const auto &entry : entries) {
     QAction *action = sub->addAction(QIcon(entry.icon), entry.label);
@@ -1061,12 +1061,12 @@ void main_window::show_explorer_menu(const QPoint &position) {
   if (index >= 0) {
     menu.addSeparator();
     rename_action = menu.addAction("Rename");
-    rename_action->setIcon(QIcon(":/icons/edit-2.svg"));
+    rename_action->setIcon(QIcon(":/icons/edit-2.png"));
     duplicate_action = menu.addAction("Duplicate");
-    duplicate_action->setIcon(QIcon(":/icons/copy.svg"));
+    duplicate_action->setIcon(QIcon(":/icons/copy.png"));
     menu.addSeparator();
     delete_action = menu.addAction("Delete");
-    delete_action->setIcon(QIcon(":/icons/trash-2.svg"));
+    delete_action->setIcon(QIcon(":/icons/trash-2.png"));
   }
 
   QAction *chosen = menu.exec(d_explorer->viewport()->mapToGlobal(position));
@@ -1093,12 +1093,12 @@ void main_window::show_viewport_menu(int index, const QPoint &global_position) {
   add_new_object_submenu(&menu);
   menu.addSeparator();
   QAction *rename_action = menu.addAction("Rename");
-  rename_action->setIcon(QIcon(":/icons/edit-2.svg"));
+  rename_action->setIcon(QIcon(":/icons/edit-2.png"));
   QAction *duplicate_action = menu.addAction("Duplicate");
-  duplicate_action->setIcon(QIcon(":/icons/copy.svg"));
+  duplicate_action->setIcon(QIcon(":/icons/copy.png"));
   menu.addSeparator();
   QAction *delete_action = menu.addAction("Delete");
-  delete_action->setIcon(QIcon(":/icons/trash-2.svg"));
+  delete_action->setIcon(QIcon(":/icons/trash-2.png"));
 
   QAction *chosen = menu.exec(global_position);
   if (chosen == rename_action) {

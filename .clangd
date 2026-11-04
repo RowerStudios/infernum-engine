@@ -1,7 +1,0 @@
-CompileFlags:
-  Add:
-    -std=c++23
-    -I/home/rower/Data/infernum-engine/src/header
-    -I/home/rower/Data/infernum-engine/inferno/scenes
-    -I/usr/include
-    -I/usr/include/json

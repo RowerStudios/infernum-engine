@@ -15,12 +15,12 @@ static tween scale_down;
 
 void main_scene(SDL_Renderer* scene_renderer)
 {
-    play_sound("lfs");
     if (!scene_renderer) {
         printf(">> scene has no renderer.. ERROR\n");
         return;
     }
     if (!ui_ready) {
+        play_sound("lfs");
         scene_ui.load(scene_renderer, "game_properties.json", "main_scene");
         engine_ui_element* element = scene_ui.find("start_button");
 
@@ -47,10 +47,12 @@ void main_scene(SDL_Renderer* scene_renderer)
     render_frame(scene_renderer, 100.0f, 100.0f, 50.0f, 50.0f, background);
     if (start_button) {
         if (start_button->clicked) {
+            play_sound("press");
             printf("clciked!");
             load_scene("lol");
         }
         if (start_button->m_enter) {
+            play_sound("hover");
             scale_up.play();
         }
         if (start_button->m_leave) {

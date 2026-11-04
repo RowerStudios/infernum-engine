@@ -73,7 +73,6 @@ int main() {
   }
   printf(">> audio engine initialized..\n");
   printf(">> starting game loop..\n");
-  play_sound("doom_lobby", true, 100, 100);
   while (is_running) {
     while (SDL_PollEvent(&event)) {
       if (event.type == SDL_EVENT_QUIT) {

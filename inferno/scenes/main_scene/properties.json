@@ -82,6 +82,41 @@
             "text_transparency": 0,
             "type": "button",
             "visible": true
+        },
+        {
+            "anchor_x": 0.5,
+            "anchor_y": 0.5,
+            "background_color": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "background_transparency": 0.5,
+            "border_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "border_size": 0,
+            "border_transparency": 1,
+            "image": "icon",
+            "image_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "image_transparency": 0,
+            "name": "image",
+            "position_x": 50.20270270270272,
+            "position_y": 22.972972972973,
+            "scale": 0.14,
+            "size_x": 0,
+            "size_y": 0,
+            "type": "image",
+            "visible": true
         }
     ]
 }

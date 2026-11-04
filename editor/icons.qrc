@@ -1,21 +1,21 @@
 <RCC>
   <qresource prefix="/">
-    <file>icons/save.svg</file>
-    <file>icons/rotate-cw.svg</file>
-    <file>icons/play.svg</file>
-    <file>icons/square.svg</file>
-    <file>icons/trash-2.svg</file>
-    <file>icons/copy.svg</file>
-    <file>icons/edit-2.svg</file>
-    <file>icons/code.svg</file>
-    <file>icons/folder.svg</file>
-    <file>icons/type.svg</file>
-    <file>icons/image.svg</file>
-    <file>icons/box.svg</file>
-    <file>icons/mouse-pointer.svg</file>
-    <file>icons/layers.svg</file>
-    <file>icons/info.svg</file>
-    <file>icons/file.svg</file>
-    <file>icons/x.svg</file>
+    <file>icons/save.png</file>
+    <file>icons/rotate-cw.png</file>
+    <file>icons/play.png</file>
+    <file>icons/square.png</file>
+    <file>icons/trash-2.png</file>
+    <file>icons/copy.png</file>
+    <file>icons/edit-2.png</file>
+    <file>icons/code.png</file>
+    <file>icons/folder.png</file>
+    <file>icons/type.png</file>
+    <file>icons/image.png</file>
+    <file>icons/box.png</file>
+    <file>icons/mouse-pointer.png</file>
+    <file>icons/layers.png</file>
+    <file>icons/info.png</file>
+    <file>icons/file.png</file>
+    <file>icons/x.png</file>
   </qresource>
 </RCC>
