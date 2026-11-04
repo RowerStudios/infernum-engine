@@ -1,0 +1,3 @@
+/build/
+/.clangd-db/
+compile_commands.json

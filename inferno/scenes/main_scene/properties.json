@@ -1,0 +1,87 @@
+{
+    "name": "main_scene",
+    "ui": [
+        {
+            "anchor_x": 0.5,
+            "anchor_y": 0.5,
+            "background_color": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "background_transparency": 1,
+            "border_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "border_size": 0,
+            "border_transparency": 1,
+            "name": "title_label",
+            "position_x": 50,
+            "position_y": 35,
+            "scale": 1,
+            "size_x": 0,
+            "size_y": 0,
+            "text": "Inferno",
+            "text_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "text_size": 48,
+            "text_transparency": 0,
+            "type": "text",
+            "visible": true
+        },
+        {
+            "anchor_x": 0.5,
+            "anchor_y": 0.5,
+            "auto_button_color": true,
+            "background_color": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "background_transparency": 0.5,
+            "border_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "border_size": 4,
+            "border_transparency": 0,
+            "hover_color": [
+                52,
+                52,
+                62,
+                255
+            ],
+            "hover_transparency": 0.1,
+            "name": "start_button",
+            "padding_x": 18,
+            "padding_y": 10,
+            "position_x": 50,
+            "position_y": 50,
+            "scale": 1,
+            "size_x": 160,
+            "size_y": 52,
+            "text": "Play",
+            "text_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "text_size": 32,
+            "text_transparency": 0,
+            "type": "button",
+            "visible": true
+        }
+    ]
+}

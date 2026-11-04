@@ -1,0 +1,51 @@
+{
+    "name": "lol",
+    "ui": [
+        {
+            "anchor_x": 0.5,
+            "anchor_y": 0.5,
+            "auto_button_color": true,
+            "background_color": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "background_transparency": 0.5,
+            "border_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "border_size": 0,
+            "border_transparency": 1,
+            "hover_color": [
+                52,
+                52,
+                62,
+                255
+            ],
+            "hover_transparency": 0.1,
+            "name": "imabutton",
+            "padding_x": 18,
+            "padding_y": 10,
+            "position_x": 53.987341772151844,
+            "position_y": 48.98734177215191,
+            "scale": 1,
+            "size_x": 0,
+            "size_y": 0,
+            "text": "Button",
+            "text_color": [
+                255,
+                255,
+                255,
+                255
+            ],
+            "text_size": 24,
+            "text_transparency": 0,
+            "type": "button",
+            "visible": true
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+hello.
+after you build the game you must move the /sounds directory where this file lives into the build directory.
+if a build directory doestn exists 
+
+ZSH/FISH/BASH/CMD
+
+"mkdir build"
+
+in the same 
+
+then run the 
+
+"build.sh or build.bat if windows or linux."
+
+after build is done 
+run
+
+"test.sh" 

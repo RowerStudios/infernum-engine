@@ -1,0 +1,6 @@
+Makefile
+.qmake.stash
+*.o
+moc_*
+infernum_editor
+.qt/

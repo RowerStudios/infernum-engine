@@ -1,0 +1,14 @@
+{
+    "assets_dir": "./assets",
+    "description": "a fps shooter game",
+    "editor_icon": "./icon.png",
+    "editor_opengl_ext": "default",
+    "editor_renderer": "opengl",
+    "fonts_dir": "./fonts",
+    "game_logo": "./icon.png",
+    "main_scene": "main_scene",
+    "name": "Inferno",
+    "scenes_dir": "./scenes",
+    "sounds_dir": "./sounds",
+    "window_title": "Inferno"
+}
